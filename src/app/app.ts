@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { ProfileCard } from "./common-ui/profile-card/profile-card";
 import { ProfileService } from './data/services/profile.service';
-import { CommonModule } from '@angular/common';
 import { Profile } from './data/interfaces/profile.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
