@@ -1,5 +1,17 @@
-<app-profile-card></app-profile-card>
+<div *ngFor="let profile of profiles">
+    <app-profile-card [profile]="profile"></app-profile-card>
+</div>
 
-<pre>
+
+
+
+
+
+
+<!-- <pre>
     {{ profiles | json }}
-</pre>
+</pre> -->
+
+<!-- @for (profile of profiles; track profile.id){
+    <app-profile-card></app-profile-card>
+} -->

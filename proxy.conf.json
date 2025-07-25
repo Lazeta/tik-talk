@@ -1,0 +1,8 @@
+{
+  "/yt-course": {
+    "target": "http://icherniakov.ru",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
