@@ -10,7 +10,7 @@ export const routes: Routes = [
         {path: '', component: SearchPage},
         {path: 'profile', component: ProfilePage},
     ],
-        canActivate: [canActivateAuth]
+        // canActivate: [canActivateAuth] // пока авторизация не проходиться, просто прячем этот маршрут
     },
     {path: 'login', component: LoginPage}
 ];
