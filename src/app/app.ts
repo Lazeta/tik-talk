@@ -1,13 +1,14 @@
-import { Component, signal } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
-import { ProfileCard } from "./common-ui/profile-card/profile-card";
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [ProfileCard],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('tik-talk');
+
 }
+

@@ -1,7 +1,12 @@
 {
     "cSpell.words": [
+        "Pageble",
+        "Sumbit",
+        "xlink",
         "Гослинг",
         "Райан"
     ],
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "svg.preview.background": "white",
+    "codeium.enableCodeLens": false
 }

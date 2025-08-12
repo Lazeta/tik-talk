@@ -23,12 +23,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public/",
+                "output": "/"
               }
             ],
             "styles": [
-              "src/fonts.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/margins.scss"
             ]
           },
           "configurations": {
@@ -65,7 +66,10 @@
               "buildTarget": "tik-talk:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
@@ -78,7 +82,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public/",
+                "output": "/"
               }
             ],
             "styles": [
@@ -88,5 +93,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
