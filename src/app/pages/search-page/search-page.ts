@@ -15,10 +15,10 @@ export class SearchPage {
   profiles: Profile[] = [];
 
   constructor() {
-    this.profileService.getTestAccounts()
+    this.profileService.getAccounts()
     .subscribe((data: Profile[]) => {
       this.profiles = data;
-      console.log('Полученные данные:', this.profiles);
+      // console.log('Полученные данные:', this.profiles);
     })
   }
 }

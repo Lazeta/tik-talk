@@ -6,30 +6,28 @@
   />
   <nav>
     <ul class="main-menu-list">
+      @for(menuItem of menuItems; track menuItem) {
       <li>
         <button class="menu-item">
-          <svg icon="home" class="menu-item-svg"></svg>
-          <span>Моя страница</span>
+          <svg [icon]="menuItem.icon" class="menu-item-svg"></svg>
+          <span>{{ menuItem.label }}</span>
         </button>
       </li>
-
-      <li>
-        <button class="menu-item">
-          <div class="chats">
-            <span> Чаты </span>
-            <svg icon="chat" class="menu-item-svg"></svg>
-            <span class="count-message"> </span>
-          </div>
-        </button>
-      </li>
-      <li>
-        <button class="menu-item">
-          <div class="search">
-            <svg icon="search" class="menu-item-svg"></svg>
-            <span> Поиск </span>
-          </div>
-        </button>
-      </li>
+      }
     </ul>
   </nav>
+
+  <p class="medium-text mb20">Подписчики</p>
+
+  <pre>{{ subscribers$ | async }}</pre>
+
+  <app-subscriber-card></app-subscriber-card>
+
+  <div class="mt20 to-subscribers">
+    <a 
+    [routerLink]="['/subscribers']" 
+    class="to-subscribers-link medium-text"
+    >Все подписчики</a>
+    <svg icon="arrow" class="to-subscribers-icon"></svg>
+  </div>
 </div>

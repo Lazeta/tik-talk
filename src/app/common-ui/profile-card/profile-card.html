@@ -1,9 +1,8 @@
 @if (profile) {
 <div class="profile-card" ngIf="profile">
   <div class="avatar-name">
-    <!-- <img src="/assets/images/avatar.png" alt="avatar.png" class="profile-card__avatar" /> -->
     <img
-      [src]="profile.avatarUrl | imgUrl"
+      [src]="(profile.avatarUrl || './assets/images/avatar.png') | imgUrl"
       [alt]="profile.lastName"
       class="profile-card__avatar"
     />

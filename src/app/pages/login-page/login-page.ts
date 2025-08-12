@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../auth/auth.service';
 import { Router } from '@angular/router';
+import { TokenResponse } from '../../auth/auth.interface';
 
 @Component({
   selector: 'app-login-page',
@@ -24,16 +25,24 @@ export class LoginPage {
   });
 
   onSubmit() {
-    this.isPasswordVisible.set(true);
-    if (this.form.valid) {
-      console.log('Form data:', this.form.value);
-      //@ts-ignore
-      this.authService.login(this.form.value)
-        .subscribe(res => {
-          this.router.navigate(['']),
-          console.log(res); 
+    this.isPasswordVisible.set(false); // Обычно скрываем пароль при отправке
 
-      })
+    if (this.form.valid) {
+      const { username, password } = this.form.value;
+
+      if (username && password) {
+        this.authService.login({ username, password })
+          .subscribe({
+            next: (res: TokenResponse) => {
+              this.router.navigate(['/']);
+              console.log('Login successful', res);
+            },
+            error: (err) => {
+              console.error('Login failed', err);
+              this.form.setErrors({ invalidCredentials: true });
+            }
+          });
+      }
     }
   }
 }

@@ -30,12 +30,31 @@
   &:focus-visible {
     background: var(--dark-hover-color);
     color: var(--primary-color);
+
+    .menu-item-svg {
+      color: var(--primary-color);
+    }
   }
 
-  .menu-item-svg {
-    width: 16px;
-    height: 16px;
-    color: var(--light-color);
-    flex-shrink: 0;
-  }
+}
+
+.menu-item-svg {
+  width: 16px;
+  height: 16px;
+}
+
+.to-subscribers {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.to-subscribers-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.to-subscribers-icon {
+  width: 18px;
+  height: 18px;
 }

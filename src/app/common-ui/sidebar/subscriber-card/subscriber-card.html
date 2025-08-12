@@ -1,0 +1,8 @@
+<div class="subscriber-card">
+  <img 
+    class="subscriber-avatar" 
+    [src]="profile?.avatarUrl !== undefined ? profile?.avatarUrl : './assets/images/avatar.png'"
+    [alt]="profile?.lastName"
+  >
+  <strong class="subtitle">{{ profile?.firstName }} {{ profile?.lastName }}</strong>
+</div>
