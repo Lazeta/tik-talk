@@ -1,7 +1,7 @@
 <div class="subscriber-card">
   <img 
     class="subscriber-avatar" 
-    [src]="profile?.avatarUrl !== undefined ? profile?.avatarUrl : './assets/images/avatar.png'"
+    [src]="profile?.avatarUrl === undefined ? './assets/images/avatar.png' : profile?.avatarUrl"
     [alt]="profile?.lastName"
   >
   <strong class="subtitle">{{ profile?.firstName }} {{ profile?.lastName }}</strong>

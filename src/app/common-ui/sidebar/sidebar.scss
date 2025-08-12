@@ -35,7 +35,6 @@
       color: var(--primary-color);
     }
   }
-
 }
 
 .menu-item-svg {
@@ -45,8 +44,15 @@
 
 .to-subscribers {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
+  padding: 20px 0;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--dark-hover-color);
+    cursor: pointer;
+  }
 }
 
 .to-subscribers-link {
@@ -57,4 +63,28 @@
 .to-subscribers-icon {
   width: 18px;
   height: 18px;
+  color: var(--primary-color);
+  margin-bottom: -6px;
+}
+
+.sidebar__footer {
+  background: var(--dark-hover-color);
+  border-radius: 2px;
+  padding: 4px 16px;
+  display: grid;
+  grid-template-columns: 32px 1fr 16px;
+  grid-gap: 12px;
+  align-items: center;
+
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  .username-text {
+    font-weight: 700;
+    color: var(--primary-color);
+  }
 }

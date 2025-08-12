@@ -10,6 +10,4 @@ import { ProfileService } from '../../data/services/profile.service';
   templateUrl: './layout.html',
   styleUrl: './layout.scss'
 })
-export class Layout {
-  profileService = inject(ProfileService)
-}
+export class Layout {}
